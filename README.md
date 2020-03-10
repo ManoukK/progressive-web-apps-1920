@@ -49,3 +49,4 @@
 
 ### Credits
 - Marissa Verdonck, met haar heb ik de eerste dag samengewerkt en we hebben samen alles opgezet. 
+- Robin Stut, hij heeft me geholpen met het routen en dan ik dat op een dynamische manier kan doen. 
