@@ -33,6 +33,7 @@ Ik ga mijn website gebruiken die ik bij web app from scratch heb gemaakt. Daarin
 ### Features
 
 ### Bronnenlijst
+- Hoe je alle id's achter de url pakt - https://stackoverflow.com/questions/25623041/how-to-configure-dynamic-routes-with-express-js
 
 ### Credits
 - Marissa Verdonck, met haar heb ik de eerste dag samengewerkt en we hebben samen alles opgezet. 
