@@ -1,4 +1,16 @@
 <%- include ('partials/head.ejs') %>
+<%- include ('partials/header.ejs') %>
 
-<h1>Hallo!</h1>
-<p>Werkt dit?</p>
+<section id="weatherCards">
+    <% results.map(function(result, index) { %>
+        <article>
+            <h2 id="title"><%= result.time %></h2>
+            <p id="summary">The weather is <%= result.summary %></p>
+            <p id="temperature">It is <%= result.temperature %> degrees outside</p>
+            <p id="wind">The wind outside is <%= result.wind %></p>
+            <a href="<%= index %>">More information</a>
+        </article>
+    <% }) %>
+</section>
+
+
