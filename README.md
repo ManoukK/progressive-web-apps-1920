@@ -1,4 +1,4 @@
-# Een website via serverside renderen
+# Een website via server side renderen
 
 ### Inhoudsopgave
 * [De opdracht](#De-opdracht)
@@ -7,18 +7,15 @@
 * [Installatie](#Installatie)
    * [Routie](#Routie)
 * [De api en data](#De-api-en-data)
-   * [De url voor de api](#De-url-voor-de-api)
-   * [Van Amerikaanse waardes naar Europese waardes](#Van-Amerikaanse-waardes-naar-Europese-waardes)
-   * [Data die de api ophaald](#Data-die-de-api-ophaald)
-   * [Data die ik gebruik](#Data-die-ik-gebruik)
-   * [Timestamps omzetten naar leesbare tijd](#Timestamps-omzetten-naar-leesbare-tijd)
 * [Features](#Features)
 * [Bronnenlijst](#Bronnenlijst)
 * [Credits](#Credits)
 
 ### De opdracht 
+De opdracht is om (zoals de titel het al zegt) een website server side te renderen. Als bij iemand het javascript uit staat zou de data nog steeds te zien moeten zijn. Uiteindelijk word de website een progressive web app. 
 
 ### Mijn concept
+Ik ga mijn 
 
 #### De hoofdpagina (tot nu toe)
 
@@ -32,16 +29,6 @@
 #### Routie 
 
 ### De api en data
-
-#### De url voor de api 
-
-#### Van Amerikaanse waardes naar Europese waardes
-
-#### Data die de api ophaald 
-
-#### Data die ik gebruik
-
-#### Timestamps omzetten naar leesbare tijd
 
 ### Features
 
