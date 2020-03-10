@@ -1,4 +1,4 @@
-# Een weer app voor Amsterdam 
+# Een website via serverside renderen
 
 ### Inhoudsopgave
 * [De opdracht](#De-opdracht)
