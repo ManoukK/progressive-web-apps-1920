@@ -62,23 +62,11 @@ a {
 }
 
 #detailWeatherCards > article {
-  /* position: absolute; */
   width: 30em;
-  /* width: 90%;
-  margin: 0em 0em 0em 2em; */
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-
-/* article {
-  display: none;
-}
-
-article.active {
-  display: initial;
-  /* visibility: visible; */
-/* }  */ 
 
 body > header > p {
   background-color: var(--lightBlue);

@@ -10,7 +10,7 @@ const data = require('./modules/api');
 
 app.get('/:id', function(req, res){ 
     //hier heeft Robin mij mee geholpen. 
-    const index = req.params.id
+    const index = req.params.id;
 
     data.getData()
     .then(function(results) {
