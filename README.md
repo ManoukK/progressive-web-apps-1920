@@ -65,7 +65,15 @@ Nodemon hoef je niet te installeren maar is wel super handig. Het zorgt ervoor d
 install --save-dev nodemon
 ```
 
-#### Routie 
+#### Server starten (en afsluiten)
+Nu je alles hebt geïnstalleerd kan je de server starten door deze command in je terminal te typen:
+```
+npm start 
+```
+
+Je kan naar localhost:3000 om de website te zien. 
+
+Wil je de server weer uitzetten? Ga naar je terminal en doe crtl+C. 
 
 ### De api en data
 
