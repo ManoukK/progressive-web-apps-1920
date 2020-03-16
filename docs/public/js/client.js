@@ -1,1 +1,1 @@
-// alert("clientside javascript staat nu aan!");
+alert("clientside javascript staat nu aan!");
