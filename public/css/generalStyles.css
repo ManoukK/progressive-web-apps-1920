@@ -32,7 +32,7 @@ a {
   padding: 0em 1em 0em 1em;
 }
 
-body > header > p {
+header > p {
   background-color: var(--lightBlue);
   color: var(--darkBlue);
   text-align: center;
