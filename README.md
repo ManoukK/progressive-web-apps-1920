@@ -85,3 +85,4 @@ Wil je de server weer uitzetten? Ga naar je terminal en doe crtl+C.
 ### Credits
 - Marissa Verdonck, met haar heb ik de eerste dag samengewerkt en we hebben samen alles opgezet. 
 - Robin Stut, hij heeft me geholpen met het routen en dan ik dat op een dynamische manier kan doen. 
+- Robin Frugte, hij heeft me geholpen met het offline bericht vanuit de service worker. 
