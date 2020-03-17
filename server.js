@@ -8,7 +8,7 @@ app.set('views', 'views');
 
 const data = require('./modules/api'); 
 
-app.use(express.static('public'));
+app.use(express.static('static'));
 
 app.get('/:id', function(req, res){ 
     //hier heeft Robin mij mee geholpen. 

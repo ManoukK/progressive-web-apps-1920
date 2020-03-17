@@ -1,0 +1,39 @@
+
+body {
+  margin: 0;
+  background-color: var(--black);
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+}
+
+h1 {
+  color: var(--yellow);
+  text-align: center;
+  font-size: 3em;
+  padding-top: 1em;
+}
+
+h2 {
+  color: var(--red);
+  text-align: center;
+}
+
+p {
+  color: var(--lightBlue);
+  background-color: var(--darkBlue);
+  margin: 1em 0em 1em 0em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+a {
+  color: var(--darkBlue);
+  background-color: var(--lightBlue);
+  padding: 0em 1em 0em 1em;
+}
+
+body > header > p {
+  background-color: var(--lightBlue);
+  color: var(--darkBlue);
+  text-align: center;
+}
