@@ -1,6 +1,7 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const host = '0.0.0.0';
+const port = process.env.PORT || 5000;
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -22,8 +23,10 @@ app.get('/:id', function(req, res){
 app.get('/', function(req, res){ 
     data.getData()
     .then(function(results) { 
-        res.render('index', { results })
+        res.render('main', { results })
     });
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, host, function() {
+    console.log(`Example app listening on port ${port}!`);
+});
