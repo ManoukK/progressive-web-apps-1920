@@ -1,6 +1,7 @@
 # Een website via server side renderen
 ## Waar ik feedback op wil:
 - Ik wil als offline pagina dat de pagina er gewoon nog zo uit ziet zoals dat het online is maar dan met een melding erbij: "hey je bent offline om het huidige weer informatie te kunnen zien zorg dat je verbonden bent met het internet" Is dat voor een offline pagina voldoende of moet ik meer hebben?
+- Ik heb nu mijn manifest en service worker in public staan. Is dat een handige plek om het daar te hebben? Waar kan ik het anders het beste neerzetten? 
 
 ### Inhoudsopgave
 * [De opdracht](#De-opdracht)
