@@ -12,7 +12,11 @@ const data = require('./modules/api');
 
 app.use(express.static('static'));
 
-app.get('/:id', function(req, res){ 
+app.get('/offline', function(req, res){
+    res.render('offline')
+});
+
+app.get('/weather/:id', function(req, res){ 
     //hier heeft Robin mij mee geholpen. 
     const index = req.params.id;
     data.getData()
