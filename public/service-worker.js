@@ -1,8 +1,8 @@
 //Daniel heeft me geholpen met cachen van html en css bestanden
 cacheName = 'v3'
 urlsToCache = [
+    'index.css',
     '/offline',
-    'index.css'
 ];
 
 self.addEventListener('install', function(event) {
