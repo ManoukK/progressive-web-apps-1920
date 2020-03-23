@@ -1,20 +1,17 @@
-const CORE_CACHE_VERSION = 'v3'
-const CORE_ASSETS = [
-  '/offline',
-]
+//Daniel heeft me geholpen met cachen van html en css bestanden
+cacheName = 'v3'
+urlsToCache = [
+    '/offline',
+    'index.css'
+];
 
-self.addEventListener('install', function (event) {
-    console.log('installing');
+self.addEventListener('install', function(event) {
     event.waitUntil(
-        caches.open(CORE_CACHE_VERSION)
-            .then(function(cache){
-                return cache.addAll(CORE_ASSETS)
-                    .then(function(){
-                        self.skipWaiting();
-                    });
-            })
-    )
-});
+      caches.open(cacheName).then(function(cache) {
+        return cache.addAll(urlsToCache);
+      })
+    );
+  });
 
 self.addEventListener('activate', function (event) {
     console.log('activating!');
@@ -22,64 +19,24 @@ self.addEventListener('activate', function (event) {
 });
 
 self.addEventListener('fetch', function(event){
-    if (isCoreGetRequest(event.request)) {
-        console.log('Core get request: ', event.request.url);
-        event.resondWith(
-            caches.open(CORE_CACHE_VERSION)
-                .then(function(cache){
-                    cache.match(event.request.url)
-                })
-        )
-    } else if (isHtmlGetRequest(event.request)) {
-        console.log('html get request', event.request.url)
 
+        // console.log('html get request', event.request.url)
+        // event.respondWith(
+        //     fetch(event.request).catch(function(e){
+        //         return new Response('je bent offline!');
+        //     })
+        // )
         event.respondWith(
-            caches.open('html-cache')
-                .then(function(cache) {
-                    cache.match(event.request.url)
-                })
+            caches
+                .match(event.request)
                 .then(function(response) {
-                    response ? response : fetchAndCache(event.request, 'html-cache')
+                    if (response) {
+                        return response;
+                    }
+                    return fetch(event.request);
+                    })
+                .catch(function() {
+                    return caches.match('/offline');
                 })
-                .catch(function(e) {
-                    return caches.open(CORE_CACHE_VERSION)
-                        .then(function(cache){
-                            cache.match('/offline')
-                        })
-                })
-        )
-    }
+        );
 });
-
-// function isHtmlGetRequest(request) {
-//     return request.method === 'GET' && (request.headers.get('accept') !== null && request.headers.get('accept'.indexOf('text/html') > -1));
-// }
-
-function fetchAndCache(request, cacheName) {
-    return fetch(Request)
-        .then(function(response) {
-            if(!response.ok) {
-                throw new TypeError('Bad response status');
-            }
-
-        const clone = response.clone()
-        caches.open(cacheName)
-            .then(function(cache){
-                cache.put(request, clone)
-                return response
-            })
-        })
-};
-
-function isHtmlGetRequest(request) {
-    return request.method === 'GET' && (request.headers.get('accept').indexOf('text/html') > -1);
-};
-
-function isCoreGetRequest(request){
-    return request.method === 'GET' && CORE_ASSETS.includes(getPathName(request.url));
-};
-
-function getPathName(requestUrl) {
-    const url = new URL (requestUrl);
-    return url.pathname;
-};
