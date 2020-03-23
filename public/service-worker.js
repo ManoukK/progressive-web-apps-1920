@@ -38,8 +38,8 @@ self.addEventListener('fetch', function(event){
                 .then(function(cache) {
                     cache.match(event.request.url)
                 })
-                .then(function(res) {
-                    res ? res : fetchAndCache(event.request, 'html-cache')
+                .then(function(response) {
+                    response ? response : fetchAndCache(event.request, 'html-cache')
                 })
                 .catch(function(e) {
                     return caches.open(CORE_CACHE_VERSION)
@@ -57,16 +57,16 @@ self.addEventListener('fetch', function(event){
 
 function fetchAndCache(request, cacheName) {
     return fetch(Request)
-        .then(function(res){
-            if(!res.ok) {
+        .then(function(response) {
+            if(!response.ok) {
                 throw new TypeError('Bad response status');
             }
 
-        const clone = res.clone()
+        const clone = response.clone()
         caches.open(cacheName)
             .then(function(cache){
                 cache.put(request, clone)
-                return res
+                return response
             })
         })
 };
