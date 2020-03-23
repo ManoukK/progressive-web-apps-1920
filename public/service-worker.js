@@ -1,6 +1,3 @@
-//offline cache van Declan:
-//https://github.com/decrek/progressive-web-apps-1920/blob/master/examples/movies-example/src/service-worker.js
-
 const CORE_CACHE_VERSION = 'v3'
 const CORE_ASSETS = [
   '/offline',
@@ -25,44 +22,38 @@ self.addEventListener('activate', function (event) {
 });
 
 self.addEventListener('fetch', function(event){
+    if (isCoreGetRequest(event.request)) {
+        console.log('Core get request: ', event.request.url);
+        event.resondWith(
+            caches.open(CORE_CACHE_VERSION)
+                .then(function(cache){
+                    cache.match(event.request.url)
+                })
+        )
+    } else if (isHtmlGetRequest(event.request)) {
         console.log('html get request', event.request.url)
-        // event.respondWith(
-        //     fetch(event.request).catch(function(e){
-        //         return new Response('je bent offline!');
-        //     })
-        // )
-        if (isCoreGetRequest(event.request)) {
-            console.log('Core get request: ', event.request.url);
-            event.resondWith(
-                caches.open(CORE_CACHE_VERSION)
-                    .then(function(cache){
-                        cache.match(event.request.url)
-                    })
-            )
-        } else if (isHtmlGetRequest(event.request)) {
-            console.log('html get request', event.request.url)
 
-            event.respondWith(
-                caches.open('html-cache')
-                    .then(function(cache) {
-                        cache.match(event.request.url)
-                    })
-                    .then(function(res) {
-                        res ? res : fetchAndCache(event.request, 'html-cache')
-                    })
-                    .catch(function(e) {
-                        return caches.open(CORE_CACHE_VERSION)
-                            .then(function(cahce){
-                                cache.match('/offline')
-                            })
-                    })
-            )
-        }
+        event.respondWith(
+            caches.open('html-cache')
+                .then(function(cache) {
+                    cache.match(event.request.url)
+                })
+                .then(function(res) {
+                    res ? res : fetchAndCache(event.request, 'html-cache')
+                })
+                .catch(function(e) {
+                    return caches.open(CORE_CACHE_VERSION)
+                        .then(function(cache){
+                            cache.match('/offline')
+                        })
+                })
+        )
+    }
 });
 
-function isHtmlGetRequest(request) {
-    return request.method === 'GET' && (request.headers.get('accept') !== null && request.headers.get('accept'.indexOf('text/html') > -1));
-}
+// function isHtmlGetRequest(request) {
+//     return request.method === 'GET' && (request.headers.get('accept') !== null && request.headers.get('accept'.indexOf('text/html') > -1));
+// }
 
 function fetchAndCache(request, cacheName) {
     return fetch(Request)
@@ -70,7 +61,7 @@ function fetchAndCache(request, cacheName) {
             if(!res.ok) {
                 throw new TypeError('Bad response status');
             }
-        
+
         const clone = res.clone()
         caches.open(cacheName)
             .then(function(cache){
