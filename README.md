@@ -74,7 +74,7 @@ Om de ervaring van de website te verbeteren heb ik het server side gemaakt. Dit 
 
 ### Minifying 
 Dankzij Gulp heb ik mijn css, manifest en service worker bestanden kleiner gemaakt. Dit scheelt weer een stukje in de snelheid. 
- * CSS was eerst 890B en wordt nu opgeslagen in de cache. Ik kon niet achterhalen hoe groot het bestand is als het naar ce client word gestuurd vanuit de server. 
+ * CSS was eerst 890B en is nu 242B en wordt nu opgeslagen in de cache. 
  * Manifest was eerst 517B en is nu 293B.
 
 Hier zie je het uiteindelijke grootte en hoe groot de bestanden in totaal eerst waren. 
@@ -82,10 +82,71 @@ Hier zie je het uiteindelijke grootte en hoe groot de bestanden in totaal eerst 
 ![Schermafbeelding 2020-03-24 om 18 17 41](https://user-images.githubusercontent.com/45541885/77456628-c8b8e200-6dfb-11ea-9f63-43944871b10b.png)
 
 ### Web safe fonts 
+Ik heb gebruik gemaakt van web safe fonts. Ik heb er 1 gekozen en dat is Courier New. Als fallback heb ik Courier en als beide fonts niet werken word monospace ingeschakeld. Het voordeel van web safe fonts is dat iedereen in elke browser/device deze kan zien. Wat betekend (volgens mij) is dat deze fonts standaard in de browser/device zitten van de gebruiker. Dit scheelt weer tijd in het laden van de website. 
 
 ### Caching
+Om er voor te zorgen dat de site de tweede keer sneller is dan de eerste keer heb ik de css opgeslagen in de cache. 
+
+Dankzij de revision-hash.js en de revision-replace.js word het css bestand pas opnieuw opgevraagd bij de server als ik wat in het bestand heb aangepast. Dit zorgt voor een snellere site als het het revisit maar heeft geen effect als je voor het eerst op de site komt. 
+
+Het css bestand word een jaar in de cache bewaard voordat het weggegooid word of opnieuw word aangevraagd. 
+```js
+app.use(/.*-[0-9a-f]{10}\..*/, function(req, res, next){
+    res.header('Cache-Control', 'max-age=365000000');
+    next();
+})
+```
+Die generieke expressies achter app.use gebruik ik om het css bestand te onderscheiden van html bestanden. Want het css bestand krijgt een nummer mee met lage letters en cijfers. 
+
+Deze methode kan je ook gebruiken voor javascript bestanden die je in je cache wilt opslaan. 
 
 ### Service worker (offline page)
+In de cache sla ik ook mijn offline pagina op zodat je feedback kan geven als de server niet kan reageren. In de install fase in mijn service-worker.js cache ik dit html bestand al. 
+
+```js
+cacheName = 'v3'
+urlsToCache = [
+    '/index-7ede693bda.css',
+    '/offline',
+];
+
+self.addEventListener('install', function(event) {
+  console.log('activating!');
+    event.waitUntil(
+      caches.open(cacheName).then(function(cache) {
+        return cache.addAll(urlsToCache);
+      })
+      .then(function(){
+          self.skipWaiting();
+      })
+    );
+  });
+```
+
+Bij de fetch fase zeg ik dat de fallback de offline pagina moet zijn en deze moet matchen met de pagina in de cache. 
+
+```js
+self.addEventListener('fetch', function(event){
+        event.respondWith(
+            caches
+                .match(event.request)
+                .then(function(response) {
+                    if (response) {
+                        return response;
+                    }
+                    return fetch(event.request);
+                    })
+                .catch(function() {
+                    return caches.match('/offline');
+                })
+        );
+});
+```
+
+Nu krijgt de gebruiker goede feedback en een meer "appie" gevoel. 
+
+##### Mijn offline pagina
+![Schermafbeelding 2020-03-24 om 18 47 08](https://user-images.githubusercontent.com/45541885/77459358-e5571900-6dff-11ea-919b-f258d585af40.png)
 
 ## Low hanging fruit
 Toen ik aan het einde nog mijn website ging testen kwam ik nog een paar dingen tegen die verbeterd konden worden. Dit heb ik gedaan voordat ik mijn definitieve test wilde vergelijken met mijn eerste website. 
