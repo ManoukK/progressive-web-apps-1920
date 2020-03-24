@@ -1,8 +1,3 @@
-# Een website via server side renderen
-## Waar ik feedback op wil:
-- Ik wil als offline pagina dat de pagina er gewoon nog zo uit ziet zoals dat het online is maar dan met een melding erbij: "hey je bent offline om het huidige weer informatie te kunnen zien zorg dat je verbonden bent met het internet" Is dat voor een offline pagina voldoende of moet ik meer hebben?
-- Ik heb nu mijn manifest en service worker in public staan. Is dat een handige plek om het daar te hebben? Waar kan ik het anders het beste neerzetten? 
-
 ### Inhoudsopgave
 * [De opdracht](#De-opdracht)
 * [Mijn concept](#Mijn-concept)
@@ -15,7 +10,7 @@
 * [Credits](#Credits)
 
 ### De opdracht 
-De opdracht is om (zoals de titel het al zegt) een website server side te renderen. Als bij iemand het javascript uit staat zou de data nog steeds te zien moeten zijn. Uiteindelijk word de website een progressive web app. 
+De opdracht is om (zoals de titel het al zegt) een website server side te renderen. Als bij iemand het javascript uit staat zou de data nog steeds te zien moeten zijn. Uiteindelijk word de website een progressive web app. Het is ook de bedoeling dat je feedback geeft als de gebruiker offline is en er worden enkele bestanden gecached zodat de website sneller is als de gebruiker er voor de tweede keer op komt. 
 
 ### Mijn concept
 Ik ga mijn website gebruiken die ik bij web app from scratch heb gemaakt. Daarin heb ik de api, darksky gebruikt. Het concept blijft hetzelfde als mijn eerste concept. Alleen word de website nu niet meer client side gerenderd maar server side. 
@@ -23,7 +18,47 @@ Ik ga mijn website gebruiken die ik bij web app from scratch heb gemaakt. Daarin
 #### De hoofdpagina (tot nu toe)
 
 ### Installatie
-Hier vertel ik wat je moet installeren om dit project te kunnen gebruiken en laat ik gelijk zien hoe je dat moet doen. Aller eerst moet je deze repo forken of downloaden met de groene knop rehcts boven. 
+Hier vertel ik wat je moet installeren om dit project te kunnen gebruiken en laat ik gelijk zien hoe je dat moet doen. Aller eerst moet je deze repo forken of downloaden met de groene knop rechts boven. Als je wilt weten wat je allemaal installeerd, lees dan mijn wiki warin ik uitleg wat alles kan en doet. 
+
+#### Zorg ervoor dat je deze commands in je terminal uitvoerd in de map waar dit project in is opgeslagen. 
+
+Allereest moet je ervoor zorgen dat je homebrew hebt geïnstalleerd:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+vervolgens installeer je node:
+```
+brew install node
+```
+
+Als je dat hebt gedaan kan je alle dependencies installeren met deze command
+```
+npm install
+```
+
+Lukt dat niet? Dan heb ik hier nog alle install commands op een rijtje
+```
+npm install express --save
+npm install ejs
+npm install node-fetch --save
+npm install npm-run-all --save-dev
+npm install --save-dev nodemon
+npm install dotenv
+npm install rimraf
+npm install chokidar
+npm install --save-dev gulp
+npm install --save-dev gulp-autoprefixer
+npm install gulp-clean-css --save-dev
+npm install --save-dev gulp-concat
+npm install --save-dev gulp-filter
+npm install --save-dev gulp-rev
+npm install gulp-rev-css-url
+npm install --save-dev gulp-rev-replace
+```
+
+
+
 
 #### Nodejs
 Om nodejs te installeren op mac moet je ook homebrew hebben. Eerst leg ik uit hoe je homebrew installeerd. 
