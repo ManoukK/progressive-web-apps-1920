@@ -5,15 +5,22 @@ const app = express();
 const host = '0.0.0.0';
 const port = process.env.PORT || 5000;
 
+const data = require('./modules/api'); 
+const revManifest = require('./static/rev-manifest');
+
+app.set('ETag', false);
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-const data = require('./modules/api'); 
-
 app.use(express.static('static'));
 
+app.use(/.*-[0-9a-f]{10}\..*/, function(req, res, next){
+    res.setHeader('Cache-Control', 'public, max-age=365000000, immutable');
+    next();
+})
+
 app.get('/offline', function(req, res){
-    res.render('offline')
+    res.render('offline', { revManifest })
 });
 
 app.get('/weather/:id', function(req, res){ 
@@ -22,14 +29,20 @@ app.get('/weather/:id', function(req, res){
     data.getData()
     .then(function(results) {
         const renderData = results[index]
-        res.render('detail', { results: renderData })
+        res.render('detail', { 
+            results: renderData,
+            revManifest
+        })
     });
 });
 
 app.get('/', function(req, res){ 
     data.getData()
     .then(function(results) { 
-        res.render('main', { results })
+        res.render('main', { 
+            results,
+            revManifest
+        })
     });
 });
 
