@@ -1,9 +1,8 @@
 ## Inhoudsopgave
 * [De opdracht](#De-opdracht)
 * [Mijn concept](#Mijn-concept)
-   * [De hoofdpagina](#De-hoofdpagina-(tot-nu-toe))
 * [Installatie](#Installatie)
-   * [Routie](#Routie)
+* [Performance enhancements](#Performance-enhancements)
 * [Features](#Features)
 * [Bronnenlijst](#Bronnenlijst)
 * [Credits](#Credits)
