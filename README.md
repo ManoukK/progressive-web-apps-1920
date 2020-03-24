@@ -4,7 +4,6 @@
    * [De hoofdpagina](#De-hoofdpagina-(tot-nu-toe))
 * [Installatie](#Installatie)
    * [Routie](#Routie)
-* [De api en data](#De-api-en-data)
 * [Features](#Features)
 * [Bronnenlijst](#Bronnenlijst)
 * [Credits](#Credits)
@@ -57,63 +56,15 @@ npm install gulp-rev-css-url
 npm install --save-dev gulp-rev-replace
 ```
 
-
-
-
-#### Nodejs
-Om nodejs te installeren op mac moet je ook homebrew hebben. Eerst leg ik uit hoe je homebrew installeerd. 
-Je kan in jouw global computer homebrew installeren met dit stukje. Plak dit in jouw terminal en druk op enter. 
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-```
-
-Nu je homebrew hebt kan je nodejs installeren. Ook dit kan je in je global computer installeren zodat je het later weer kan gebruiken. 
-Op deze manier kan je nodejs installeren. Type dit in de terminal. 
-```
-brew install node
-```
-
-#### Express.js
-Ga nu naar de map waarin je wilt werken (de map waar dit project in staat) Als het goed is heb je de package.json ook mee gekregen van de download en hoef je daar verder niks mee te doen. 
-
-Als je met de terminal in de juiste map zit installeer dan express.js. Dat doe je door dit in de terminal te zetten. Druk op enter en het begint te installeren. 
-```
-npm install express --save
-```
-
-#### ejs 
-Express en ejs werken heel goed samen. Ejs zorgt ervoor dat je javascript in html kan schrijven waardoor je heel makkelijk data in html kan renderen. 
-
-Als het goed is ben je nog steeds in de map waarin je wilt werken. Installeer hierin ook ejs door dit in je terminal te plakken. 
-```
-npm install ejs
-```
-
-#### node-fetch 
-Om de fetch te gebruiken die ik in het vorige project ook heb gebruikt heb ik ook node-fetch gedownload. Dit moet je ook nog installeren om gebruik te kunnen maken van de api fetch. 
-
-```
-npm install node-fetch --save
-```
-
-#### nodemon
-Nodemon hoef je niet te installeren maar is wel super handig. Het zorgt ervoor dat je bij elke aanpassing die je maakt in je code, je dat gewoon live kan zien. Als je dit niet installeerd moet je bij elke aanpassing de server afsluiten en weer opstarten om de verandering live te zien. Het installeren doe je in de map waarin je wilt werken met dit stukje:
-
-```
-install --save-dev nodemon
-```
-
 #### Server starten (en afsluiten)
 Nu je alles hebt geïnstalleerd kan je de server starten door deze command in je terminal te typen:
 ```
 npm start 
 ```
 
-Je kan naar localhost:3000 om de website te zien. 
+Je kan naar localhost:5000 om de website te zien. 
 
 Wil je de server weer uitzetten? Ga naar je terminal en doe crtl+C. 
-
-### De api en data
 
 ### Features
 
