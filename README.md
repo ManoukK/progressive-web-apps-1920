@@ -19,7 +19,7 @@ Ik ga mijn website gebruiken die ik bij web app from scratch heb gemaakt. Daarin
 ### Installatie
 Hier vertel ik wat je moet installeren om dit project te kunnen gebruiken en laat ik gelijk zien hoe je dat moet doen. Aller eerst moet je deze repo forken of downloaden met de groene knop rechts boven. Als je wilt weten wat je allemaal installeerd, lees dan mijn wiki warin ik uitleg wat alles kan en doet. 
 
-#### Zorg ervoor dat je deze commands in je terminal uitvoerd in de map waar dit project in is opgeslagen. 
+##### Zorg ervoor dat je deze commands in je terminal uitvoerd in de map waar dit project in is opgeslagen. 
 
 Allereest moet je ervoor zorgen dat je homebrew hebt geïnstalleerd:
 ```
