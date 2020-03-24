@@ -74,7 +74,12 @@ Om de ervaring van de website te verbeteren heb ik het server side gemaakt. Dit 
 
 ### Minifying 
 Dankzij Gulp heb ik mijn css, manifest en service worker bestanden kleiner gemaakt. Dit scheelt weer een stukje in de snelheid. 
-- 
+ * CSS was eerst 890B en wordt nu opgeslagen in de cache. Ik kon niet achterhalen hoe groot het bestand is als het naar ce client word gestuurd vanuit de server. 
+ * Manifest was eerst 517B en is nu 293B.
+
+Hier zie je het uiteindelijke grootte en hoe groot de bestanden in totaal eerst waren. 
+
+![Schermafbeelding 2020-03-24 om 18 17 41](https://user-images.githubusercontent.com/45541885/77456628-c8b8e200-6dfb-11ea-9f63-43944871b10b.png)
 
 ### Web safe fonts 
 
