@@ -8,16 +8,18 @@ const port = process.env.PORT || 5000;
 const data = require('./modules/api'); 
 const revManifest = require('./static/rev-manifest');
 
-app.set('ETag', false);
+app.use(/.*-[0-9a-f]{10}\..*/, function(req, res, next){
+    res.header('Cache-Control', 'max-age=365000000');
+    next();
+})
+
+// app.set('ETag', false);
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 app.use(express.static('static'));
 
-app.use(/.*-[0-9a-f]{10}\..*/, function(req, res, next){
-    res.setHeader('Cache-Control', 'public, max-age=365000000, immutable');
-    next();
-})
+
 
 app.get('/offline', function(req, res){
     res.render('offline', { revManifest })

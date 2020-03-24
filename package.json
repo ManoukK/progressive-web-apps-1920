@@ -14,7 +14,7 @@
     "build:manifest": "node scripts/build-manifest.js",
     "build:serviceworker": "node scripts/build-serviceworker.js",
     "build:images": "node scripts/build-img.js",
-    "postbuild": "node scripts/revision-hash.js",
+    "postbuild": "node scripts/revision-hash.js && node scripts/revision-replace.js",
     "watch": "run-p watch:*",
     "watch:css": "chokidar 'public/css/*.css' --command 'npm run build:css'",
     "watch:manifest": "chokidar 'public/manifest.json' --command 'npm run build:manifest'",
