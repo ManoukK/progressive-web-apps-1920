@@ -83,6 +83,10 @@ Hier zie je het uiteindelijke grootte en hoe groot de bestanden in totaal eerst 
 ### Web safe fonts 
 Ik heb gebruik gemaakt van web safe fonts. Ik heb er 1 gekozen en dat is Courier New. Als fallback heb ik Courier en als beide fonts niet werken word monospace ingeschakeld. Het voordeel van web safe fonts is dat iedereen in elke browser/device deze kan zien. Wat betekend (volgens mij) is dat deze fonts standaard in de browser/device zitten van de gebruiker. Dit scheelt weer tijd in het laden van de website. 
 
+```css
+  font-family: "Courier New", Courier, monospace;
+```
+
 ### Caching
 Om er voor te zorgen dat de site de tweede keer sneller is dan de eerste keer heb ik de css opgeslagen in de cache. 
 
