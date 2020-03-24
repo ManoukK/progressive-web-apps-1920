@@ -170,8 +170,12 @@ Een van de errors die ik kreeg is dat ik id's gebruikte waar classes moesten sta
 
 ## Bronnenlijst
 - Hoe je alle id's achter de url pakt - https://stackoverflow.com/questions/25623041/how-to-configure-dynamic-routes-with-express-js
+- Hoe je een manifest opzet - 
 
 ## Credits
 - Marissa Verdonck, met haar heb ik de eerste dag samengewerkt en we hebben samen alles opgezet. 
 - Robin Stut, hij heeft me geholpen met het routen en dan ik dat op een dynamische manier kan doen. 
 - Robin Frugte, hij heeft me geholpen met het offline bericht vanuit de service worker. 
+- Daniel, hij heeft me geholpen met het pre cachen van een offline pagina.
+- Daniel alweer :p , hij heeft me geholpen met de foutmeldingen van heroku. Ik kreeg mijn website niet gedeployed en Daniel heeft me geholpen met debuggen. 
+- Declan, ik heb heel erg veel aan zijn voorbeeld codes gehad. Zo heb ik een buildtool, css in de borwser cache en een service worker.
