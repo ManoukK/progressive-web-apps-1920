@@ -1,7 +1,7 @@
 //Daniel heeft me geholpen met cachen van html en css bestanden
 cacheName = 'v3'
 urlsToCache = [
-    '/index-4f7e1f0525.css',
+    '/index-7ede693bda.css',
     '/offline',
 ];
 
@@ -55,8 +55,8 @@ self.addEventListener('fetch', function(event){
 /**
  * Get a pathname from a full URL by stripping off domain
  *
- * @param {Object} requestUrl        The request object, e.g. https://www.mydomain.com/index-4f7e1f0525.css
- * @returns {String}                Relative url to the domain, e.g. index-4f7e1f0525.css
+ * @param {Object} requestUrl        The request object, e.g. https://www.mydomain.com/index-7ede693bda.css
+ * @returns {String}                Relative url to the domain, e.g. index-7ede693bda.css
  */
 function getPathName(requestUrl) {
 	const url = new URL(requestUrl);

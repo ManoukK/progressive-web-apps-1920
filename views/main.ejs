@@ -1,13 +1,13 @@
 <%- include ('partials/head.ejs') %>
 <%- include ('partials/header.ejs') %>
 
-<section id="weatherCards">
+<section class="weatherCards">
     <% results.map(function(result, index) { %>
         <article>
-            <h2 id="title"><%= result.time %></h2>
-            <p id="summary">The weather is <%= result.summary %></p>
-            <p id="temperature">It is <%= result.temperature %> degrees outside</p>
-            <p id="wind">The wind outside is <%= result.wind %></p>
+            <h2 class="title"><%= result.time %></h2>
+            <p class="summary">The weather is <%= result.summary %></p>
+            <p class="temperature">It is <%= result.temperature %> degrees outside</p>
+            <p class="wind">The wind outside is <%= result.wind %></p>
             <a href="/weather/<%= index %>">More information</a>
         </article>
     <% }) %>

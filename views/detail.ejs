@@ -1,17 +1,17 @@
 <%- include ('partials/head.ejs') %>
 <%- include ('partials/header.ejs') %>
 
-<section id="detailWeatherCards">
+<section class="detailWeatherCards">
     <article>
-        <h2 id="title"><%= results.time %></h2>
-        <p id="summary">The weather is <%= results.summary %></p>
-        <p id="type">The weather type is <%= results.weatherType %></p>
-        <p id="temperature">The temperature outside is <%= results.temperature %> degrees</p>
-        <p id="temperatureFeeling">It feels like <%= results.temperatureFeeling %> degrees outside</p>
-        <p id="wind">The wind outside is <%= results.wind %> km/h</p>
-        <p id="windGust">The gusts of wind outside are <%= results.windGust %> km/h</p>
-        <p id="visibility">You can see <%= results.visibility %> km in the distance</p>
-        <p id="airpressure">The air pressure is <%= results.airpressure %> hPa</p>
+        <h2 class="title"><%= results.time %></h2>
+        <p class="summary">The weather is <%= results.summary %></p>
+        <p class="type">The weather type is <%= results.weatherType %></p>
+        <p class="temperature">The temperature outside is <%= results.temperature %> degrees</p>
+        <p class="temperatureFeeling">It feels like <%= results.temperatureFeeling %> degrees outside</p>
+        <p class="wind">The wind outside is <%= results.wind %> km/h</p>
+        <p class="windGust">The gusts of wind outside are <%= results.windGust %> km/h</p>
+        <p class="visibility">You can see <%= results.visibility %> km in the distance</p>
+        <p class="airpressure">The air pressure is <%= results.airpressure %> hPa</p>
         <a href="/">back</a>
     </article>
 </section>

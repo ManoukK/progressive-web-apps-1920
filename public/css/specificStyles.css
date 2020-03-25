@@ -1,28 +1,19 @@
-#weatherCards {
+.weatherCards {
   display: flex;
   position: absolute;
 }
 
-#detailWeatherCards > article {
+.detailWeatherCards > article {
   width: 30em;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-#weatherCards > article {
+.weatherCards > article {
   margin: 1em 1em 1em 2em;
 }
 
-#averageTemp {
+.averageTemp {
   background-color: brown;
-}
-
-#loading > p {
-  padding: 2em;
-  text-align: center;
-}
-
-#loading {
-  display: none;
 }
