@@ -180,13 +180,12 @@ Dit leek mij ook een easy fix. Ik miste nog een theme color in mijn head. Je kan
 <meta name="theme-color" content="currentcolor">
 ```
 
-## Features
-
 ## Bronnenlijst
 - Hoe je alle id's achter de url pakt - https://stackoverflow.com/questions/25623041/how-to-configure-dynamic-routes-with-express-js
-- Hoe je een manifest opzet - 
+- Hoe je een manifest opzet - https://web.dev/add-manifest/
 - Theme color in je head meegeven - https://webhint.io/docs/user-guide/hints/hint-meta-theme-color/
 - Description in je head meegeven - https://web.dev/meta-description/?utm_source=lighthouse&utm_medium=devtools
+- De voorbeeld codes en presentaties van Declan
 
 ## Credits
 - Marissa Verdonck, met haar heb ik de eerste dag samengewerkt en we hebben samen alles opgezet. 
