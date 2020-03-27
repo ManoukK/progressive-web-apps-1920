@@ -93,7 +93,13 @@ Wil je de server weer uitzetten? Ga naar je terminal en doe crtl+C.
 
 ![Schermafbeelding 2020-03-27 om 13 42 10](https://user-images.githubusercontent.com/45541885/77757686-f8e9c600-7031-11ea-873c-08bcc27016b2.png)
 
-Zoals je ziet zijn is de score heel hoog. Het is goed dat ik de easy fixes nog heb gedaan want daardoor is mijn SEO score nu op 100 ipv 97. Dat scheelt toch een paar puntjes. Bij de best practices heb ik nog een "error" staan over http alleen ik zou nu zo even niet weten hoe ik dat moet oplossen maar dat is een mooie taak voor als ik een twee verbeter ronde kon maken met dit project. 
+De score bij mijn before website zijn een stuk lager dan bij mijn after(deze) website. Ook wel logisch want eerst had ik me helemaal niet op gefocust toen ik dit voor het eerst ging maken. Bij performance ben ik met snelheid er wel flink op vooruit gegaan. Eerst was de time to first byte 590 ms en nu is het 240 ms. Dat is meer dan de helft minder wachttijd! 240 ms is nog steeds niet super top maar wel al een stuk beter. 
+
+Ook heb ik nu de accessibility omhoog gekregen omdat ik per ongeluk id’s gebruikte terwijl het classes moesten zijn. Nadat ik dit had gefixt ging mijn score naar 100. 
+
+Bij before en after heb ik bij best practices allebei dezelfde error over http. Ik zou nu zo even niet weten hoe ik dat moet oplossen maar dat is een mooie taak voor als ik een twee verbeter ronde kon maken met dit project.
+
+De SEO bij before is ook een stuk lager dan nu. Dat komt omdat daar een aantal kleine dingetjes tussen stonden die je makkelijk kon fixen. Nadat ik dat had gedaan kreeg ik een score van 100. 
 
 ### Server side rendering
 Om de ervaring van de website te verbeteren heb ik het server side gemaakt. Dit heb ik gedaan met nodejs, express en ejs. Op deze manier kan ik bestanden browser cachen, een offline pagina tonen en javascript en css bestanden comprimeren. 
