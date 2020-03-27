@@ -72,6 +72,19 @@ Wil je de server weer uitzetten? Ga naar je terminal en doe crtl+C.
 ## Performance enhancements
 ### Before and after
 
+#### After
+![Schermafbeelding 2020-03-27 om 13 41 13](https://user-images.githubusercontent.com/45541885/77757602-c8a22780-7031-11ea-9fc9-a86e41ce16fa.png)
+
+![Schermafbeelding 2020-03-27 om 13 41 34](https://user-images.githubusercontent.com/45541885/77757633-dc4d8e00-7031-11ea-9c42-15f32dacaee1.png)
+
+![Schermafbeelding 2020-03-27 om 13 41 54](https://user-images.githubusercontent.com/45541885/77757651-e4a5c900-7031-11ea-83e3-3017bf361db9.png)
+
+![Schermafbeelding 2020-03-27 om 13 42 01](https://user-images.githubusercontent.com/45541885/77757663-ed969a80-7031-11ea-8ac9-6989a8fc830a.png)
+
+![Schermafbeelding 2020-03-27 om 13 42 10](https://user-images.githubusercontent.com/45541885/77757686-f8e9c600-7031-11ea-873c-08bcc27016b2.png)
+
+Zoals je ziet zijn is de score heel hoog. Het is goed dat ik de easy fixes nog heb gedaan want daardoor is mijn SEO score nu op 100 ipv 97. Dat scheelt toch een paar puntjes. 
+
 ### Server side rendering
 Om de ervaring van de website te verbeteren heb ik het server side gemaakt. Dit heb ik gedaan met nodejs, express en ejs. Op deze manier kan ik bestanden browser cachen, een offline pagina tonen en javascript en css bestanden comprimeren. 
 
