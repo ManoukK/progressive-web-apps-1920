@@ -54,6 +54,9 @@ npm install --save-dev gulp-rev
 npm install gulp-rev-css-url
 npm install --save-dev gulp-rev-replace
 ```
+Wil je meer weten over wat je allemaal moet/gaat installeren? Lees dan mijn wiki waarin ik kort uitleg waar het voor gebruikt word. 
+https://github.com/ManoukK/progressive-web-apps-1920/wiki/Uitleg-installaties-&-hoe-deze-gebruikt-worden
+
 
 ### Server starten (en afsluiten)
 Nu je alles hebt geïnstalleerd kan je de server starten door deze command in je terminal te typen:
