@@ -71,7 +71,7 @@ Wil je de server weer uitzetten? Ga naar je terminal en doe crtl+C.
 
 ## Performance enhancements
 ### Before and after
-#### Before
+### Before
 ![Schermafbeelding 2020-03-27 om 13 55 53](https://user-images.githubusercontent.com/45541885/77758611-8f6ab700-7033-11ea-9c48-4e495bd02e01.png)
 
 ![Schermafbeelding 2020-03-27 om 13 56 06](https://user-images.githubusercontent.com/45541885/77758630-9b567900-7033-11ea-941b-a2ee6b116b3d.png)
@@ -82,7 +82,7 @@ Wil je de server weer uitzetten? Ga naar je terminal en doe crtl+C.
 
 ![Schermafbeelding 2020-03-27 om 13 56 40](https://user-images.githubusercontent.com/45541885/77758675-af01df80-7033-11ea-862c-9afe41a52683.png)
 
-#### After
+### After
 ![Schermafbeelding 2020-03-27 om 13 41 13](https://user-images.githubusercontent.com/45541885/77757602-c8a22780-7031-11ea-9fc9-a86e41ce16fa.png)
 
 ![Schermafbeelding 2020-03-27 om 13 41 34](https://user-images.githubusercontent.com/45541885/77757633-dc4d8e00-7031-11ea-9c42-15f32dacaee1.png)
