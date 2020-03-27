@@ -13,7 +13,8 @@ De opdracht is om (zoals de titel het al zegt) een website server side te render
 ## Mijn concept
 Ik ga mijn website gebruiken die ik bij web app from scratch heb gemaakt. Daarin heb ik de api, darksky gebruikt. Het concept blijft hetzelfde als mijn eerste concept. Alleen word de website nu niet meer client side gerenderd maar server side. 
 
-#### De hoofdpagina (tot nu toe)
+#### De hoofdpagina
+![Schermafbeelding 2020-03-27 om 11 51 36](https://user-images.githubusercontent.com/45541885/77748869-5b869600-7021-11ea-9bb6-9dcb1e94a50a.png)
 
 ## Installatie
 Hier vertel ik wat je moet installeren om dit project te kunnen gebruiken en laat ik gelijk zien hoe je dat moet doen. Aller eerst moet je deze repo forken of downloaden met de groene knop rechts boven. Als je wilt weten wat je allemaal installeerd, lees dan mijn wiki warin ik uitleg wat alles kan en doet. 
@@ -54,6 +55,9 @@ npm install --save-dev gulp-rev
 npm install gulp-rev-css-url
 npm install --save-dev gulp-rev-replace
 ```
+Wil je meer weten over wat je allemaal moet/gaat installeren? Lees dan mijn wiki waarin ik kort uitleg waar het voor gebruikt word. 
+https://github.com/ManoukK/progressive-web-apps-1920/wiki/Uitleg-installaties-&-hoe-deze-gebruikt-worden
+
 
 ### Server starten (en afsluiten)
 Nu je alles hebt geïnstalleerd kan je de server starten door deze command in je terminal te typen:
@@ -67,6 +71,35 @@ Wil je de server weer uitzetten? Ga naar je terminal en doe crtl+C.
 
 ## Performance enhancements
 ### Before and after
+### Before
+![Schermafbeelding 2020-03-27 om 13 55 53](https://user-images.githubusercontent.com/45541885/77758611-8f6ab700-7033-11ea-9c48-4e495bd02e01.png)
+
+![Schermafbeelding 2020-03-27 om 13 56 06](https://user-images.githubusercontent.com/45541885/77758630-9b567900-7033-11ea-941b-a2ee6b116b3d.png)
+
+![Schermafbeelding 2020-03-27 om 13 56 23](https://user-images.githubusercontent.com/45541885/77758648-a14c5a00-7033-11ea-9756-054cb5e10793.png)
+
+![Schermafbeelding 2020-03-27 om 13 56 32](https://user-images.githubusercontent.com/45541885/77758660-a8736800-7033-11ea-9dd9-3b00587c4a0e.png)
+
+![Schermafbeelding 2020-03-27 om 13 56 40](https://user-images.githubusercontent.com/45541885/77758675-af01df80-7033-11ea-862c-9afe41a52683.png)
+
+### After
+![Schermafbeelding 2020-03-27 om 13 41 13](https://user-images.githubusercontent.com/45541885/77757602-c8a22780-7031-11ea-9fc9-a86e41ce16fa.png)
+
+![Schermafbeelding 2020-03-27 om 13 41 34](https://user-images.githubusercontent.com/45541885/77757633-dc4d8e00-7031-11ea-9c42-15f32dacaee1.png)
+
+![Schermafbeelding 2020-03-27 om 13 41 54](https://user-images.githubusercontent.com/45541885/77757651-e4a5c900-7031-11ea-83e3-3017bf361db9.png)
+
+![Schermafbeelding 2020-03-27 om 13 42 01](https://user-images.githubusercontent.com/45541885/77757663-ed969a80-7031-11ea-8ac9-6989a8fc830a.png)
+
+![Schermafbeelding 2020-03-27 om 13 42 10](https://user-images.githubusercontent.com/45541885/77757686-f8e9c600-7031-11ea-873c-08bcc27016b2.png)
+
+De score bij mijn before website zijn een stuk lager dan bij mijn after(deze) website. Ook wel logisch want eerst had ik me helemaal niet op gefocust toen ik dit voor het eerst ging maken. Bij performance ben ik met snelheid er wel flink op vooruit gegaan. Eerst was de time to first byte 590 ms en nu is het 240 ms. Dat is meer dan de helft minder wachttijd! 240 ms is nog steeds niet super top maar wel al een stuk beter. 
+
+Ook heb ik nu de accessibility omhoog gekregen omdat ik per ongeluk id’s gebruikte terwijl het classes moesten zijn. Nadat ik dit had gefixt ging mijn score naar 100. 
+
+Bij before en after heb ik bij best practices allebei dezelfde error over http. Ik zou nu zo even niet weten hoe ik dat moet oplossen maar dat is een mooie taak voor als ik een twee verbeter ronde kon maken met dit project.
+
+De SEO bij before is ook een stuk lager dan nu. Dat komt omdat daar een aantal kleine dingetjes tussen stonden die je makkelijk kon fixen. Nadat ik dat had gedaan kreeg ik een score van 100. 
 
 ### Server side rendering
 Om de ervaring van de website te verbeteren heb ik het server side gemaakt. Dit heb ik gedaan met nodejs, express en ejs. Op deze manier kan ik bestanden browser cachen, een offline pagina tonen en javascript en css bestanden comprimeren. 
@@ -90,7 +123,7 @@ Ik heb gebruik gemaakt van web safe fonts. Ik heb er 1 gekozen en dat is Courier
 ### Caching
 Om er voor te zorgen dat de site de tweede keer sneller is dan de eerste keer heb ik de css opgeslagen in de cache. 
 
-Dankzij de revision-hash.js en de revision-replace.js word het css bestand pas opnieuw opgevraagd bij de server als ik wat in het bestand heb aangepast. Dit zorgt voor een snellere site als het het revisit maar heeft geen effect als je voor het eerst op de site komt. 
+Dankzij de revision-hash.js en de revision-replace.js word het css bestand pas opnieuw opgevraagd bij de server als ik wat in het bestand heb aangepast. Dit zorgt voor een snellere site als de gebruiker voor de tweede (of derde) keer op de site komt maar het heeft geen effect als je voor het eerst op de site komt. 
 
 Het css bestand word een jaar in de cache bewaard voordat het weggegooid word of opnieuw word aangevraagd. 
 ```js
@@ -163,14 +196,25 @@ Ik kwam erachter dat ik nog een aantal regels code in mijn css bestand had staan
 Een van de errors die ik kreeg is dat ik id's gebruikte waar classes moesten staan. Dit heb ik opgelost door de id's te vervangen voor de classes en hierdoor is mijn website weer een stukje beter in SEO. 
 
 ### Geen meta description
+Ik had geen description in mijn head staan over mijn website. Ik heb nooit geweten dat het kon en het is heel makkelijk op te lossen! De description dient voor in de zoek resultaten zodat mensen al een stukje over jouw content/website kunnen lezen voordat zij erop klikken. 
+Zo ziet dat er nu voor mij uit. 
+```
+<meta name="Description" content="The weather in Amsterdam for the next 3 hours">
+```
 
 ### Geen theme color
+Dit leek mij ook een easy fix. Ik miste nog een theme color in mijn head. Je kan de browser een kleur geven als iemand jouw pagina bezoekt op mobiel. Ik heb ervoor gekomen om gewoon de huidige kleur van de gebruiker aan te houden. Dit vind ik wel zo gebruiksvriendelijk vooral nu je met mobiel dark mode aan en uit kan zetten. 
 
-## Features
+```
+<meta name="theme-color" content="currentcolor">
+```
 
 ## Bronnenlijst
 - Hoe je alle id's achter de url pakt - https://stackoverflow.com/questions/25623041/how-to-configure-dynamic-routes-with-express-js
-- Hoe je een manifest opzet - 
+- Hoe je een manifest opzet - https://web.dev/add-manifest/
+- Theme color in je head meegeven - https://webhint.io/docs/user-guide/hints/hint-meta-theme-color/
+- Description in je head meegeven - https://web.dev/meta-description/?utm_source=lighthouse&utm_medium=devtools
+- De voorbeeld codes en presentaties van Declan
 
 ## Credits
 - Marissa Verdonck, met haar heb ik de eerste dag samengewerkt en we hebben samen alles opgezet. 
