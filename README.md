@@ -13,7 +13,8 @@ De opdracht is om (zoals de titel het al zegt) een website server side te render
 ## Mijn concept
 Ik ga mijn website gebruiken die ik bij web app from scratch heb gemaakt. Daarin heb ik de api, darksky gebruikt. Het concept blijft hetzelfde als mijn eerste concept. Alleen word de website nu niet meer client side gerenderd maar server side. 
 
-#### De hoofdpagina (tot nu toe)
+#### De hoofdpagina
+![Schermafbeelding 2020-03-27 om 11 51 36](https://user-images.githubusercontent.com/45541885/77748869-5b869600-7021-11ea-9bb6-9dcb1e94a50a.png)
 
 ## Installatie
 Hier vertel ik wat je moet installeren om dit project te kunnen gebruiken en laat ik gelijk zien hoe je dat moet doen. Aller eerst moet je deze repo forken of downloaden met de groene knop rechts boven. Als je wilt weten wat je allemaal installeerd, lees dan mijn wiki warin ik uitleg wat alles kan en doet. 
@@ -166,14 +167,26 @@ Ik kwam erachter dat ik nog een aantal regels code in mijn css bestand had staan
 Een van de errors die ik kreeg is dat ik id's gebruikte waar classes moesten staan. Dit heb ik opgelost door de id's te vervangen voor de classes en hierdoor is mijn website weer een stukje beter in SEO. 
 
 ### Geen meta description
+Ik had geen description in mijn head staan over mijn website. Ik heb nooit geweten dat het kon en het is heel makkelijk op te lossen! De description dient voor in de zoek resultaten zodat mensen al een stukje over jouw content/website kunnen lezen voordat zij erop klikken. 
+Zo ziet dat er nu voor mij uit. 
+```
+<meta name="Description" content="The weather in Amsterdam for the next 3 hours">
+```
 
 ### Geen theme color
+Dit leek mij ook een easy fix. Ik miste nog een theme color in mijn head. Je kan de browser een kleur geven als iemand jouw pagina bezoekt op mobiel. Ik heb ervoor gekomen om gewoon de huidige kleur van de gebruiker aan te houden. Dit vind ik wel zo gebruiksvriendelijk vooral nu je met mobiel dark mode aan en uit kan zetten. 
+
+```
+<meta name="theme-color" content="currentcolor">
+```
 
 ## Features
 
 ## Bronnenlijst
 - Hoe je alle id's achter de url pakt - https://stackoverflow.com/questions/25623041/how-to-configure-dynamic-routes-with-express-js
 - Hoe je een manifest opzet - 
+- Theme color in je head meegeven - https://webhint.io/docs/user-guide/hints/hint-meta-theme-color/
+- Description in je head meegeven - https://web.dev/meta-description/?utm_source=lighthouse&utm_medium=devtools
 
 ## Credits
 - Marissa Verdonck, met haar heb ik de eerste dag samengewerkt en we hebben samen alles opgezet. 
