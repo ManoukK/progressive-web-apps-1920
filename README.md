@@ -90,7 +90,7 @@ Ik heb gebruik gemaakt van web safe fonts. Ik heb er 1 gekozen en dat is Courier
 ### Caching
 Om er voor te zorgen dat de site de tweede keer sneller is dan de eerste keer heb ik de css opgeslagen in de cache. 
 
-Dankzij de revision-hash.js en de revision-replace.js word het css bestand pas opnieuw opgevraagd bij de server als ik wat in het bestand heb aangepast. Dit zorgt voor een snellere site als het het revisit maar heeft geen effect als je voor het eerst op de site komt. 
+Dankzij de revision-hash.js en de revision-replace.js word het css bestand pas opnieuw opgevraagd bij de server als ik wat in het bestand heb aangepast. Dit zorgt voor een snellere site als de gebruiker voor de tweede (of derde) keer op de site komt maar het heeft geen effect als je voor het eerst op de site komt. 
 
 Het css bestand word een jaar in de cache bewaard voordat het weggegooid word of opnieuw word aangevraagd. 
 ```js
