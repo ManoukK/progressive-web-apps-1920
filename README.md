@@ -71,6 +71,16 @@ Wil je de server weer uitzetten? Ga naar je terminal en doe crtl+C.
 
 ## Performance enhancements
 ### Before and after
+#### Before
+![Schermafbeelding 2020-03-27 om 13 55 53](https://user-images.githubusercontent.com/45541885/77758611-8f6ab700-7033-11ea-9c48-4e495bd02e01.png)
+
+![Schermafbeelding 2020-03-27 om 13 56 06](https://user-images.githubusercontent.com/45541885/77758630-9b567900-7033-11ea-941b-a2ee6b116b3d.png)
+
+![Schermafbeelding 2020-03-27 om 13 56 23](https://user-images.githubusercontent.com/45541885/77758648-a14c5a00-7033-11ea-9756-054cb5e10793.png)
+
+![Schermafbeelding 2020-03-27 om 13 56 32](https://user-images.githubusercontent.com/45541885/77758660-a8736800-7033-11ea-9dd9-3b00587c4a0e.png)
+
+![Schermafbeelding 2020-03-27 om 13 56 40](https://user-images.githubusercontent.com/45541885/77758675-af01df80-7033-11ea-862c-9afe41a52683.png)
 
 #### After
 ![Schermafbeelding 2020-03-27 om 13 41 13](https://user-images.githubusercontent.com/45541885/77757602-c8a22780-7031-11ea-9fc9-a86e41ce16fa.png)
@@ -83,7 +93,7 @@ Wil je de server weer uitzetten? Ga naar je terminal en doe crtl+C.
 
 ![Schermafbeelding 2020-03-27 om 13 42 10](https://user-images.githubusercontent.com/45541885/77757686-f8e9c600-7031-11ea-873c-08bcc27016b2.png)
 
-Zoals je ziet zijn is de score heel hoog. Het is goed dat ik de easy fixes nog heb gedaan want daardoor is mijn SEO score nu op 100 ipv 97. Dat scheelt toch een paar puntjes. 
+Zoals je ziet zijn is de score heel hoog. Het is goed dat ik de easy fixes nog heb gedaan want daardoor is mijn SEO score nu op 100 ipv 97. Dat scheelt toch een paar puntjes. Bij de best practices heb ik nog een "error" staan over http alleen ik zou nu zo even niet weten hoe ik dat moet oplossen maar dat is een mooie taak voor als ik een twee verbeter ronde kon maken met dit project. 
 
 ### Server side rendering
 Om de ervaring van de website te verbeteren heb ik het server side gemaakt. Dit heb ik gedaan met nodejs, express en ejs. Op deze manier kan ik bestanden browser cachen, een offline pagina tonen en javascript en css bestanden comprimeren. 
