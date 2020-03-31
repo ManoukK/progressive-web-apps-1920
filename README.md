@@ -4,6 +4,7 @@
 * [Installatie](#Installatie)
 * [Performance enhancements](#Performance-enhancements)
 * [Features](#Features)
+* [Conclusie](#Conclusie)
 * [Bronnenlijst](#Bronnenlijst)
 * [Credits](#Credits)
 
