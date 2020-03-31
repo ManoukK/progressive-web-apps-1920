@@ -209,6 +209,9 @@ Dit leek mij ook een easy fix. Ik miste nog een theme color in mijn head. Je kan
 <meta name="theme-color" content="currentcolor">
 ```
 
+## Conclusie
+https://github.com/ManoukK/progressive-web-apps-1920/wiki/Conclusie
+
 ## Bronnenlijst
 - Hoe je alle id's achter de url pakt - https://stackoverflow.com/questions/25623041/how-to-configure-dynamic-routes-with-express-js
 - Hoe je een manifest opzet - https://web.dev/add-manifest/
